@@ -1,0 +1,44 @@
+clc;
+clear;
+list=6:13;
+picPath='G:\forcoding\Program\matlab\fire detection\img\test\img';
+segPath='G:\forcoding\Program\matlab\fire detection\img\test\img';
+W=28;
+gap=10;
+f_rate=0.75;
+train_x=zeros(W,W,51523);
+train_y=zeros(1,51523);
+[fuck,len]=size(list);
+t=1;
+for times=1:len
+    pic = imread([picPath,sprintf('%d.jpg',list(times))]);
+    pic=rgb2gray(pic);
+%     [l,w]=size(pic);
+%     pic=imresize(pic,[300,int32(w/(l/300))]);
+    seg = imread([segPath,sprintf('%d_seg.bmp',list(times))]);
+%     seg=imresize(seg,[300,int32(w/(l/300))]);
+    [l,w]=size(seg);
+    for i=1:gap:l
+        for j=1:gap:w
+            if i+W-1<l&&j+W-1<w
+                train_x(:,:,t)=pic(i:i+W-1,j:j+W-1);
+                fire=0;
+                for ii=i:i+W-1
+                    for jj=j:j+W-1
+                        if seg(i,j)~=0
+                            fire=fire+1;
+                        end
+                    end
+                end
+                if fire>W*W*f_rate
+                    train_y(:,t)=1;
+                end
+                t=t+1
+            end
+        end    
+    end
+end
+
+t
+save 'train_x' train_x
+save 'train_y' train_y

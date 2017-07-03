@@ -1,0 +1,20 @@
+﻿Build started 2014/5/14 16:58:01.
+     1>Project "C:\Users\think\Desktop\CvBSLibGMM\CvBSLib\CvLib.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching ".\Debug\CvLib.unsuccessfulbuild".
+       ClCompile:
+         D:\C++视频\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CvPixelBackgroundGMM.cpp
+         CvPixelBackgroundGMM.cpp
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(C:\Users\think\Desktop\CvBSLibGMM\CvBSLib\.\Debug\CvLib.lib) 与 Library 的 OutputFile 属性值(C:\Users\think\Desktop\CvBSLibGMM\CvBSLib\CvBSLib.lib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(CvLib) 与 Library 的 OutputFile 属性值(CvBSLib)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Lib.OutputFile) 中指定的值匹配。
+       Lib:
+         D:\C++视频\VC\bin\Lib.exe /OUT:"CvBSLib.lib" /NOLOGO .\Debug\CvPixelBackgroundGMM.obj
+         CvLib.vcxproj -> C:\Users\think\Desktop\CvBSLibGMM\CvBSLib\.\Debug\CvLib.lib
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\CvLib.unsuccessfulbuild".
+         Touching ".\Debug\CvLib.lastbuildstate".
+     1>Done Building Project "C:\Users\think\Desktop\CvBSLibGMM\CvBSLib\CvLib.vcxproj" (build target(s)).
+
+生成成功。
+
+Time Elapsed 00:00:05.70
